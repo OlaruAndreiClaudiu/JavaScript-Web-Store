@@ -1,0 +1,22 @@
+.head-container {
+    background-color: red;
+    img {
+        height: 25px;
+        width: 25px;
+        position: relative;
+        left: 1870px;
+    }
+}
+.main-container {
+    background-color: green;
+    img {
+        height: 400px;
+        width: 400px;
+        margin-left:61px;
+    }
+    position: relative;
+    display: flex;
+}
+.end-container {
+    background-color: blue;
+}
