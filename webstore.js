@@ -80,3 +80,18 @@ function displaycart() {
         }).join('');
     } 
 }
+function checkout() {
+    if(cart.length == 0) {
+        alert(`Your cart is empty!`);
+        return;
+    } else {
+        (cart.length > 0) 
+            alert(`Thank you for your purchase!`);
+            document.getElementById('cartItem').innerHTML = "Your cart is empty";
+            document.getElementById("total").innerHTML = "$ "+0+".00";
+            document.getElementById("count").innerHTML=0;     
+    }
+    renderCart();
+}
+document.getElementById("checkout-btn").addEventListener("click", checkout);
+renderProducts();

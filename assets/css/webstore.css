@@ -75,11 +75,9 @@ body {
     padding: 10px;
     margin-bottom: 20px;
     color: white;
-    display: flex;
     align-items: center;
 }
 .foot {
-    display: flex;
     justify-content: space-between;
     margin: 20px 0px;
     padding: 10px 0px;
