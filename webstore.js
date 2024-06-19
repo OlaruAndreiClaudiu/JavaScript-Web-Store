@@ -24,10 +24,10 @@ const product = [
         price: 350,
     }
 ];
-const categories = [...new Set(product.map((item)=>
+const products = [...new Set(product.map((item)=>
 {return item}))]
 let i=0;
-document.getElementById('root').innerHTML = categories.map((item)=>
+document.getElementById('root').innerHTML = products.map((item)=>
 {
     var {image, title, price} = item;
     return(
@@ -47,7 +47,7 @@ document.getElementById('root').innerHTML = categories.map((item)=>
 var cart =[];
 
 function addtocart(a) {
-    cart.push({...categories[a]});
+    cart.push({...products[a]});
     displaycart();
 }
 function delElement(a) {
@@ -89,7 +89,8 @@ function checkout() {
             alert(`Thank you for your purchase!`);
             document.getElementById('cartItem').innerHTML = "Your cart is empty";
             document.getElementById("total").innerHTML = "$ "+0+".00";
-            document.getElementById("count").innerHTML=0;     
+            document.getElementById("count").innerHTML = 0;
+            cart.length = 0;
     }
     renderCart();
 }
