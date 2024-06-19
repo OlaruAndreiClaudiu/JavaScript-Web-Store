@@ -158,5 +158,5 @@ button:hover {
 }
 .fa-trash:hover {
     cursor: pointer;
-    color: #333;
+    color: red;
 }
