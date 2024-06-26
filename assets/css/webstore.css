@@ -132,21 +132,6 @@ button {
 .clear {
     background-color: red;
 }
-.cart-qty-plus {
-    width: 0%;
-    border-radius: 50%;
-    background-color: blue;
-    color: white;
-}
-.qty {
-    border-color: blue;
-    width: 12px;
-    border-width: 1px;
-}
-.cart-qty-minus {
-    width: 10%;
-    border-radius: 50%;
-}
 button:hover {
     background-color: #333;
 }
