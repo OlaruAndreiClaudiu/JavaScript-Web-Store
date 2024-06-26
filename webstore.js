@@ -85,7 +85,6 @@ function clear() {
     renderCart();
 }
 document.getElementById("clear-btn").addEventListener("click", clear);
-renderProducts();
 function checkout() {
     if(cart.length == 0) {
         alert(`Your cart is empty!`);
