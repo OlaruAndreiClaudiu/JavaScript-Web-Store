@@ -59,6 +59,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    height: fit-content;
 }
 .sidebar {
     width: 40%;
@@ -67,6 +68,7 @@ body {
     margin-right: -15px;
     padding: 15px;
     text-align: center;
+    overflow-y: scroll;
 }
 .head {
     background-color: blue;
@@ -87,7 +89,6 @@ body {
     display : flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     border: 1px solid blue;
     border-radius: 10px;
     padding: 15px;
@@ -114,6 +115,11 @@ body {
     align-items: center;
     justify-content: space-between;
     height: 110px;
+}
+h1 {
+    position: relative;
+    top: -15px;
+    font-size: 20px;;
 }
 h2 {
     font-size: 20px;
@@ -163,3 +169,53 @@ button:hover {
     cursor: pointer;
     color: red;
 }
+.popup .overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.popup .content {
+    position: absolute;
+    top: 50%;
+    left: 180%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 450px;
+    height: 300px;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.popup .close-btn {
+    cursor: pointer;
+    position: relative;
+    right: -395px;
+    top: -15px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+.popup.active .overlay {
+    display: block;
+}
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+.popup {
+    width: 100%;
+    position: relative;
+}
+::-webkit-scrollbar-track-::
