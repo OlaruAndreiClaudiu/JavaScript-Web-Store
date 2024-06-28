@@ -79,7 +79,7 @@ function displaycart() {
     else {
         document.getElementById("cartItem").innerHTML = cart.map((items)=>
         {
-            var {image, title, price, id} = items;
+            var {image, title, price, id, stock} = items;
             total = total + price;
             document.getElementById("total").innerHTML = "$ "+total+".00";
             return(
@@ -89,7 +89,7 @@ function displaycart() {
                 </div>
                 <p>${id}</p>
                 <button onclick="totalClick(1)" style='width: 10px;'>+</button>
-                <span id="totalClicks">1</span>
+                <span id="totalClicks">${stock}</span>
                 <button onclick="totalClick(-1)" style='width: 10px;'>-</button>
                 <p style='font-size: 12px;'>${title}</p>
                 <h2 style='font-size: 15px;'>$ ${price}.00</h2>`+
@@ -127,9 +127,6 @@ function totalClick(click) {
     const sumvalue = parseInt(totalClicks.innerText) + click;
     totalClicks.innerText = sumvalue;
     if(sumvalue <= 1) {
-        totalClicks.innerText = 1;
-    }
-    if(sumvalue > stock) {
         totalClicks.innerText = 1;
     }
 }
