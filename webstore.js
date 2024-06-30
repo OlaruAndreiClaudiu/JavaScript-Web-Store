@@ -89,7 +89,7 @@ function displaycart() {
                 </div>
                 <p>${id}</p>
                 <button onclick="totalClick(1)" style='width: 10px;'>+</button>
-                <span id="totalClicks">${stock}</span>
+                <span id="totalClicks">1</span>
                 <button onclick="totalClick(-1)" style='width: 10px;'>-</button>
                 <p style='font-size: 12px;'>${title}</p>
                 <h2 style='font-size: 15px;'>$ ${price}.00</h2>`+
