@@ -79,7 +79,7 @@ function displaycart() {
     else {
         document.getElementById("cartItem").innerHTML = cart.map((items)=>
         {
-            var {image, title, price, id, stock} = items;
+            var {image, title, price, id} = items;
             total = total + price;
             document.getElementById("total").innerHTML = "$ "+total+".00";
             return(
